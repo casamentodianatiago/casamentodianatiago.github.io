@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diana & Tiago - Wedding Celebration</title>
+    <title>Diana e Tiago - Casamento</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
@@ -13,11 +13,9 @@
         <nav>
             <div class="logo">D & T</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#story">Our Story</a></li>
-                <li><a href="#details">Details</a></li>
-                <li><a href="#rsvp">RSVP</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#details">Informações</a></li>
+                <li><a href="#rsvp">Confirmação de presença</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -29,55 +27,31 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Diana & Tiago</h1>
-            <h2>We're Getting Married</h2>
-            <p class="date">December 31, 2025</p>
+            <h1>Diana e Tiago</h1>
+            <h2>O nosso casamento</h2>
+            <p class="date">20 de junho de 2026</p>
             <div id="countdown">
                 <div class="countdown-item">
                     <span id="days">00</span>
-                    <p>Days</p>
+                    <p>Dias</p>
                 </div>
                 <div class="countdown-item">
                     <span id="hours">00</span>
-                    <p>Hours</p>
+                    <p>Horas</p>
                 </div>
                 <div class="countdown-item">
                     <span id="minutes">00</span>
-                    <p>Minutes</p>
+                    <p>Minutos</p>
                 </div>
                 <div class="countdown-item">
                     <span id="seconds">00</span>
-                    <p>Seconds</p>
+                    <p>Segundos</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="story" class="story">
-        <div class="container">
-            <h2 class="section-title">Our Story</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>How We Met</h3>
-                        <p>Share your story of how you met here.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>First Date</h3>
-                        <p>Describe your first date together.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>The Proposal</h3>
-                        <p>Share the story of the proposal.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <section id="details" class="details">
         <div class="container">
@@ -85,27 +59,26 @@
             <div class="details-grid">
                 <div class="details-card">
                     <i class="fas fa-church"></i>
-                    <h3>Ceremony</h3>
-                    <p class="time">4:00 PM</p>
-                    <p class="location">Church Name</p>
-                    <p class="address">123 Wedding Lane, City</p>
-                    <a href="#" class="button">View Map</a>
+                    <h3>Cerimónia</h3>
+                    <p class="time">13h00</p>
+                    <p class="location">Igreja Paroquial de Real</p>
+                    <p class="address">Vila Meã</p>
+                    <a href="https://maps.google.com/?q=Igreja+Paroquial+de+Real,+Vila+Meã" class="button" target="_blank" rel="noopener">Ver no mapa</a>
                 </div>
                 <div class="details-card">
                     <i class="fas fa-glass-cheers"></i>
-                    <h3>Reception</h3>
-                    <p class="time">6:00 PM</p>
-                    <p class="location">Venue Name</p>
-                    <p class="address">456 Celebration Ave, City</p>
-                    <a href="#" class="button">View Map</a>
+                    <h3>Receção</h3>
+                    <p class="time">16h00</p>
+                    <p class="location">Quinta de Santo António - Country House & Villas</p>
+                    <p class="address">Rua de Santo António, 81, Torrão</p>
+                    <a href="#" class="button">Ver no mapa</a>
                 </div>
                 <div class="details-card">
                     <i class="fas fa-bed"></i>
-                    <h3>Accommodations</h3>
-                    <p class="location">Hotel Name</p>
-                    <p class="address">789 Comfort Street, City</p>
-                    <p>Special rate code: WEDDING2025</p>
-                    <a href="#" class="button">Book Room</a>
+                    <h3>Alojamento</h3>
+                    <p class="address">Opcional</p>
+                    <p class="location">Quinta de Santo António - Country House & Villas</p>
+                    <a href="https://www.quintastantonio.pt/quartos-e-villas/" class="button">Informações sobre os quartos</a>
                 </div>
             </div>
         </div>
@@ -113,28 +86,22 @@
 
     <section id="rsvp" class="rsvp">
         <div class="container">
-            <h2 class="section-title">RSVP</h2>
-            <p class="rsvp-text">Please respond by November 15, 2025</p>
+            <h2 class="section-title">Confirmação de presença</h2>
+            <p class="rsvp-text">Por favor, confirme até 1 de maio de 2026.</p>
             <div class="rsvp-form">
                 <form id="rsvpForm" action="https://formspree.io/f/yourformid" method="POST">
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Full Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Email Address" required>
+                        <input type="text" name="name" placeholder="Nomes" required>
                     </div>
                     <div class="form-group">
                         <select name="attending" required>
-                            <option value="" disabled selected>Will you attend?</option>
-                            <option value="yes">Joyfully Accept</option>
-                            <option value="no">Regretfully Decline</option>
+                            <option value="" disabled selected>Podemos contar com a tua presença?</option>
+                            <option value="yes">Claro que sim</option>
+                            <option value="no">Infelizmente não :(</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="number" name="guests" min="0" max="5" placeholder="Number of Guests (including you)">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Any dietary restrictions or message for the couple?"></textarea>
+                        <textarea name="message" placeholder="Possuis alguma restrição alimentar?"></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Send RSVP</button>
                 </form>
@@ -143,8 +110,7 @@
     </section>
 
     <footer>
-        <p>Diana & Tiago © 2025</p>
-        <p>With love from Lisbon, Portugal</p>
+        <p>Diana & Tiago © 2026</p>
     </footer>
 
     <script src="js/main.js"></script>

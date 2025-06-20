@@ -1,4 +1,4 @@
-/main.js
+// main.js
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation
     const burger = document.querySelector('.burger');
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Countdown timer
-    const weddingDate = new Date('December 31, 2025 16:00:00').getTime();
+    const weddingDate = new Date('June 20, 2026 00:00:00').getTime();
     
     const countdown = setInterval(function() {
         const now = new Date().getTime();
