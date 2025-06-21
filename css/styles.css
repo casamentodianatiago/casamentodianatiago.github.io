@@ -2,7 +2,7 @@
 :root {
     --primary-color: #67755c;
     --secondary-color: #000000;
-    --accent-color: #e1d8bf;
+    --accent-color: #bfe1d6;
     --text-color: #3b3732;
     --light-text: #ffffff;
     --font-title: 'Playfair Display', serif;
@@ -119,7 +119,7 @@ nav {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(224, 224, 224, 0.5), rgba(202, 202, 202, 0.5)), url('https://source.unsplash.com/random/1600x900/?wedding') no-repeat center center/cover;
+    background: linear-gradient(rgba(224, 224, 224, 0.5), rgba(60, 44, 44, 0.5)), url('https://source.unsplash.com/random/1600x900/?wedding') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
