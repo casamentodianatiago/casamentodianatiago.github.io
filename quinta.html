@@ -10,28 +10,129 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">D & T</div>
+                <nav>
+            <div class="logo">D | T</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Alojamento</a></li>
+                <li><a href="#rsvp">Reserva</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </div>
         </nav>
     </header>
+    
     <!--Add some text  -->
-    <section class="hero">
+    <section class="hero" style="min-height: 190vh;">
         <div class="hero-content">
+            <div style="padding-top: min(32vw, 32px);"></div>
             <h1 style="font-size: 2.2em;">Alojamento</h1>
             <p style="font-size: 1.2em;">A Quinta de Santo António - Country House & Villas dispõe de alojamento para os convidados.</p>
-        <!--Add a photo -->
-        <div style="height: 32px;"></div>   
-        <div class="photo">
-            <!--center the photo-->
-            <img src="images/quinta.png" alt="Quinta de Santo António" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+            <!--Add a photo -->
+            <div style="height: 48px;"></div>   
+            <div class="photo">
+                <!--center the photo-->
+                <img src="images/quinta.png" alt="Quinta de Santo António" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+            </div>
+            <div style="height: 48px;"></div>   
+                <p style="font-size: 1.2em;">Disfrute desta experiência connosco!</p>
+                <p style="font-size: 1.2em; margin-top: 24px;">
+                    <a href="https://www.quintastantonio.pt/quartos-e-villas/" target="_blank" style="display: inline-block; padding: 12px 24px; background-color: rgba(100, 106, 96, 0.9); color: #fff; border-radius: 6px; text-decoration: none; font-size: 1.1em;">
+                        Ver detalhes dos quartos e villas <span style="font-family: 'Font Awesome 5 Free'; font-weight: 900;">&#xf061;</span>
+                    </a>
+                </p>
+            <div style="width:100%; max-width:500px; margin: 32px auto 0 auto;">
+
+            <div style="height: 48px;"></div>   
+
+            <p style="font-size: 1.2em; font-weight: bold;">Tarifas</p>
+
+            <div style="height: 24px;"></div>   
+
+            <table style="width: 120%; min-width: 300px; border-collapse: collapse; font-size: 1.2em; margin: 0 auto; display: block;">
+                <thead>
+                    <tr>
+                        <th style="border:1px solid #333; padding:8px; text-align:left;">Tipologia</th>
+                        <th style="border:1px solid #333; padding:8px; text-align:left;">Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border:1px solid #333; padding:8px; text-align:left;">Quarto Duplo <em>standard</em> (até 2 pessoas)</td>
+                        <td style="border:1px solid #333; padding:8px;">170€</td>
+                    </tr>
+                    <tr>
+                        <td style="border:1px solid #333; padding:8px; text-align:left;">Quarto Duplo com varanda (até 2 pessoas)</td>
+                        <td style="border:1px solid #333; padding:8px;">200€</td>
+                    </tr>
+                    <tr>
+                        <td style="border:1px solid #333; padding:8px; text-align:left;">Quarto Duplo com banheira (até 2 pessoas)</td>
+                        <td style="border:1px solid #333; padding:8px;">220€</td>
+                    </tr>
+                    <tr>
+                        <td style="border:1px solid #333; padding:8px; text-align:left;">Villa <em>standard</em> (até 4 pessoas)</td>
+                        <td style="border:1px solid #333; padding:8px;">260€</td>
+                    </tr>
+                    <tr>
+                        <td style="border:1px solid #333; padding:8px; text-align:left;">Villa <em>Deluxe</em> (até 4 pessoas)</td>
+                        <td style="border:1px solid #333; padding:8px;">280€</td>
+                    </tr>
+                </tbody>
+            </table>
+
+             <div style="height: 24px;"></div>   
+
+            <p style="font-size: 1.2em;"><strong>Inclui:</strong> Refeição tipo brunch no dia seguinte (21.06.2026) às 11h30</p>
+
+    </div>
         </div>
-        <div style="height: 32px;"></div>   
-        <div class="hero-content">
-            <p style="font-size: 1.2em;">Disfrute desta experiência connosco!</p>
+    </section>
+
+    <section id="rsvp" class="rsvp">
+        <div class="container">
+            <h2 class="section-title">Reserva de quartos e <em>villas</em></h2>
+            <p class="rsvp-text">Vai desejar alojamento na Quinta de Santo António - Country House & Villas? (sujeito a disponibilidade)</p>
+            <div class="rsvp-form">
+                <form id="rsvpForm" action="https://formspree.io/f/yourformid" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Nome(s)" required style="font-size: 1.1em;">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="num_people" placeholder="Número de pessoas" min="1" required style="font-size: 1.1em;">
+                    </div>
+                    <div class="form-group">
+                        <select name="tipologia" required style="font-size: 1.1em;">
+                            <option value="" disabled selected>Tipologia</option>
+                            <option value="quarto-duplo-standard">Quarto Duplo standard (até 2 pessoas)</option>
+                            <option value="quarto-duplo-varanda">Quarto Duplo com varanda (até 2 pessoas)</option>
+                            <option value="quarto-duplo-banheira">Quarto Duplo com banheira (até 2 pessoas)</option>
+                            <option value="villa-standard">Villa standard (até 4 pessoas)</option>
+                            <option value="villa-deluxe">Villa Deluxe (até 4 pessoas)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Resposta</button>
+                </form>
+            </div>
         </div>
         
-    </section>
     
+        </div>
+        <div style="text-align: center; margin: 32px 0;"></div>
+        <a href="index.html" style="display: inline-block; padding: 12px 24px; background-color:rgba(100, 106, 96, 0.9); color: #fff; border-radius: 6px; text-decoration: none; font-size: 1.1em;">
+        <i class="fas fa-arrow-left" style="margin-right: 8px;"></i>Voltar
+        </a>
+                    <div style="height: 48px;"></div>   
+
+
+    </section>
+
+
+    <footer>
+        <p>Diana & Tiago © 2026</p>
+    </footer>
+
 </body>
+
 </html>
 
