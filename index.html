@@ -11,11 +11,12 @@
 <body>
     <header>
         <nav>
-            <div class="logo">D & T</div>
+            <div class="logo">D | T</div>
             <ul class="nav-links">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#details">Informações</a></li>
                 <li><a href="#rsvp">Confirmação de presença</a></li>
+                <li><a href="#contacts">Contactos</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -30,8 +31,9 @@
             <link href="https://fonts.cdnfonts.com/css/tt-tsars-a-trial" rel="stylesheet">
             <h1 class="custom-font" style="font-family: 'TT Tsars A Trial', 'Playfair Display', serif;">
                 Diana <link href="https://fonts.cdnfonts.com/css/angella-white-personal-use-font" rel="stylesheet">
-                <span style="font-family: 'Angella White Personal Use', cursive;">e</span> Tiago
+                <span style="font-size: 0.7em;">&amp;</span> Tiago
             </h1>
+            <img src="images/imagem.png" alt="Diana e Tiago" class="hero-image" style="max-width: 300px; width: 100%; margin: 24px auto; display: block;">
             <h2>O nosso casamento</h2>
             <p class="date" style="font-family: 'TT Tsars A Trial', 'Playfair Display', serif; font-weight: bold;">20.06.2026</p>
             <div id="countdown">
@@ -74,15 +76,14 @@
                     <h3>Receção</h3>
                     <p class="time">16h00</p>
                     <p class="location">Quinta de Santo António - Country House & Villas</p>
-                    <p class="address">Rua de Santo António, 81, Torrão</p>
-                    <a href="#" class="button">Ver no mapa</a>
+                    <a href="https://www.google.com/maps/place/Quinta+de+Santo+Ant%C3%B3nio+-+Country+House+%26+Villas/@41.0839288,-8.2899218,751m/data=!3m1!1e3!4m10!3m9!1s0xd249b91245ae6c9:0xe454c2289c1456bb!5m3!1s2025-09-01!4m1!1i2!8m2!3d41.0839248!4d-8.2873469!16s%2Fg%2F11qrkym4yx?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D" class="button" target="_blank" rel="noopener">Ver no mapa</a>
                 </div>
                 <div class="details-card">
                     <i class="fas fa-bed"></i>
                     <h3>Alojamento</h3>
-                    <p class="address">Opcional</p>
+                    <p class="address">(Opcional)</p>
                     <p class="location">Quinta de Santo António - Country House & Villas</p>
-                    <a href="quinta.html" class="button">Informações</a>
+                    <a href="quinta.html" class="button">Ver mais informações</a>
                 </div>
             </div>
         </div>
@@ -91,31 +92,56 @@
     <section id="rsvp" class="rsvp">
         <div class="container">
             <h2 class="section-title">Confirmação de presença</h2>
-            <p class="rsvp-text">Por favor, confirme até 1 de maio de 2026.</p>
+            <p class="rsvp-text">Por favor, confirme a sua presença preenchendo o formulário até 1 de maio de 2026.</p>
             <div class="rsvp-form">
                 <form id="rsvpForm" action="https://formspree.io/f/yourformid" method="POST">
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Nomes" required>
+                        <input type="text" name="name" placeholder="Nomes dos convidados" required style="font-size: 1.1em;">
                     </div>
                     <div class="form-group">
                         <select name="attending" required>
-                            <option value="" disabled selected>Podemos contar com a tua presença?</option>
-                            <option value="yes">Claro que sim</option>
-                            <option value="no">Infelizmente não :(</option>
+                            <option value="" disabled selected style="font-size: 1.2em;">Tem alguma alergia ou restrição alimentar?</option>
+                            <option value="yes">Sim</option>
+                            <option value="no">Não</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Possuis alguma restrição alimentar?"></textarea>
+                        <textarea name="message" placeholder="Se respondeu sim à pergunta anterior, por favor especifique."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Qual a música que não pode faltar na pista de dança?"></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Enviar Resposta</button>
                 </form>
             </div>
         </div>
     </section>
+    <section id="contacts" class="contacts">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Contactos</h2>
+            <p style="margin-bottom: 20px;">Se tiver alguma dúvida ou questão, por favor entre em contacto connosco:</p>
+            <div class="contacts-list" style="display: inline-block; text-align: left;">
+                <div class="contact-item" style="text-align: left; margin-bottom: 8px;">
+                    <i class="fas fa-phone"></i>
+                    <span class="contact-name">Noiva:</span>
+                    <a href="tel:+351912345678" class="contact-phone">+351 913 031 314</a>
+                </div>
+                <div class="contact-item" style="text-align: left;">
+                    <i class="fas fa-phone"></i>
+                    <span class="contact-name">Noivo:</span>
+                    <a href="tel:+351987654321" class="contact-phone">+351 919 182 365</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+    </section>
 
     <footer>
         <p>Diana & Tiago © 2026</p>
     </footer>
+
+
 
     <script src="js/main.js"></script>
 </body>

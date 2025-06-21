@@ -1,8 +1,8 @@
 /* Base Styles */
 :root {
-    --primary-color: #67755c;
+    --primary-color: rgba(100, 106, 96, 0.9);
     --secondary-color: #000000;
-    --accent-color: #bfe1d6;
+    --accent-color: rgba(234, 228, 217, 0.737);
     --text-color: #3b3732;
     --light-text: #ffffff;
     --font-title: 'Playfair Display', serif;
@@ -119,7 +119,7 @@ nav {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(224, 224, 224, 0.5), rgba(60, 44, 44, 0.5)), url('https://source.unsplash.com/random/1600x900/?wedding') no-repeat center center/cover;
+    background: linear-gradient(rgba(235, 227, 211, 0.737), rgba(235, 227, 211, 0.737)), url('https://source.unsplash.com/random/1600x900/?wedding') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -210,6 +210,9 @@ nav {
 }
 
 /* Details Section */
+.details {
+    background: linear-gradient(rgba(234, 228, 217, 0.737), rgba(234, 228, 217, 0.737)), url('https://source.unsplash.com/random/1600x900/?wedding') no-repeat center center/cover;
+}
 .details-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -314,6 +317,62 @@ footer {
 @media screen and (max-width: 1024px) {
     .nav-links {
         width: 70%;
+    }
+}
+
+/* Contacts Section */
+.contacts {
+    background-color: var(--accent-color);
+    padding: 4rem 2rem;
+}
+
+.contacts-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    padding: 2rem;
+    text-align: center;
+}
+
+.contacts-title {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.contacts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contacts-list li {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+.contacts-list i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 600px) {
+    .contacts-container {
+        padding: 1rem;
+    }
+    .contacts-title {
+        font-size: 1.4rem;
+    }
+    .contacts-list li {
+        font-size: 1rem;
     }
 }
 
