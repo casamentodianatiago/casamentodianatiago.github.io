@@ -81,17 +81,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Accept': 'application/json'
             }
         })
-        .then(response => {
-            if (response.ok) {
-                form.reset();
-                alert('Thank you for your RSVP!');
-            } else {
-                alert('There was an error submitting the form. Please try again later.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('There was an error submitting the form. Please try again later.');
-        });
     });
 });
