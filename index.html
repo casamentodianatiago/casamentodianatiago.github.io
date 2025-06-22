@@ -124,21 +124,30 @@
                             musica: this.musica.value
                         };
 
-                        fetch("https://script.google.com/macros/s/AKfycbzo0MEiF9YyTUDrcNGKC8yW8tWuhmvWL7S_1Aj51dPXjLzOu48yaBB_buEFBrY-S5ni/exec", {
+                        fetch("YOUR_WEB_APP_URL_HERE", {
                             method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"  // ✅ Required for JSON parsing
+                            },
                             body: JSON.stringify(formData)
                         })
-                        .then(res => res.json())
-                        .then(response => {
-                            alert("Resposta enviada com sucesso!");
-                            document.getElementById("rsvpForm").reset();
+                        .then(async res => {
+                            if (!res.ok) throw new Error("Network response was not ok");
+                            const response = await res.json();
+                            if (response.result === "Success") {
+                                alert("Resposta enviada com sucesso!");
+                                document.getElementById("rsvpForm").reset();
+                            } else {
+                                throw new Error(response.message || "Erro desconhecido");
+                            }
                         })
                         .catch(err => {
-                            alert("Erro ao enviar. Tente novamente.");
                             console.error(err);
+                            alert("Erro ao enviar. Tente novamente.");
                         });
                     });
                     </script>
+
 
 
             </div>
