@@ -115,37 +115,31 @@
                 </form>
                 
                 <script>
-                    const form = document.getElementById('rsvpForm');
-                    form.addEventListener('submit', async (e) => {
-                    e.preventDefault();
+                    document.getElementById("rsvpForm").addEventListener("submit", function(e) {
+                        e.preventDefault();
 
-                    const formData = {
-                        name: form.name.value,
-                        attending: form.attending.value,
-                        restricao: form.restricao.value,
-                        musica: form.musica.value
-                    };
+                        const formData = {
+                            name: this.name.value,
+                            restricao: this.restricao.value,
+                            musica: this.musica.value
+                        };
 
-                    try {
-                        const response = await fetch('https://script.google.com/macros/s/AKfycbwjmE8hajtVOO98AAADUQp6D78M4nJ_oBDQkULzdrzhU_ntDfK5GiQpVq6INJWDH502/exec', {
-                            method: 'POST',
-                            body: JSON.stringify(formData),
-                            headers: {
-                                'Content-Type': 'application/json'
-                            }
+                        fetch("https://script.google.com/macros/s/AKfycbzo0MEiF9YyTUDrcNGKC8yW8tWuhmvWL7S_1Aj51dPXjLzOu48yaBB_buEFBrY-S5ni/exec", {
+                            method: "POST",
+                            body: JSON.stringify(formData)
+                        })
+                        .then(res => res.json())
+                        .then(response => {
+                            alert("Resposta enviada com sucesso!");
+                            document.getElementById("rsvpForm").reset();
+                        })
+                        .catch(err => {
+                            alert("Erro ao enviar. Tente novamente.");
+                            console.error(err);
                         });
-                        const result = await response.json();
-                        if (result.result === 'success') {
-                            alert('Resposta enviada com sucesso!');
-                            form.reset();
-                        } else {
-                            alert('Erro ao enviar resposta: ' + (result.message || 'Tente novamente.'));
-                        }
-                    } catch (err) {
-                        alert('Erro de conexão. Tente novamente.');
-                    }
-                });
-                </script>
+                    });
+                    </script>
+
 
             </div>
         </div>
