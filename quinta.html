@@ -98,7 +98,7 @@
             <h2 class="section-title">Reserva de quartos e <em>villas</em></h2>
             <p class="rsvp-text">Preencha o seguinte formulário se pretender alojamento na Quinta de Santo António - Country House & Villas (sujeito a disponibilidade)</p>
             <div class="rsvp-form">
-                <form id="rsvpForm" action="https://formspree.io/f/yourformid" method="POST">
+                <form id="rsvpForm">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Nome(s)" required style="font-size: 1.1em;">
                     </div>
@@ -117,6 +117,31 @@
                     </div>
                     <button type="submit" class="submit-btn">Enviar Resposta</button>
                 </form>
+                <script>
+                document.getElementById("rsvpForm").addEventListener("submit", function(e) {
+                    e.preventDefault();
+
+                    const formData = {
+                        name: this.name.value,
+                        numero_pessoas: this.num_people.value,
+                        tipologia: this.tipologia.value
+                    };
+
+                    fetch("https://script.google.com/macros/s/AKfycbxDXBcHV-pXWAvc3dfyogJYeERf6QArDradKsYb1m-Ma4tIkoOZlrlkStsJum5sJpx-/exec", {
+                        method: "POST",
+                        body: JSON.stringify(formData)
+                    })
+                    .then(res => res.json())
+                    .then(response => {
+                        alert("Resposta enviada num_peoplecom sucesso!");
+                        document.getElementById("rsvpForm").reset();
+                    })
+                    .catch(err => {
+                        alert("Erro ao enviar. Tente novamente.");
+                        console.error(err);
+                    });
+                });
+                </script>
             </div>
         </div>
         

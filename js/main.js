@@ -66,20 +66,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 1000);
 
     // Form submission with Formspree
-    const form = document.getElementById('rsvpForm');
+    //const form = document.getElementById('rsvpForm');
     
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
+    // // Listen for form submission
+    // form.addEventListener('submit', function(e) {
+    //     e.preventDefault(); // Prevent default form submission
         
-        // Replace with your own Formspree endpoint in the HTML
-        const formAction = form.action;
+    //     // Get the Formspree endpoint from the form's action attribute
+    //     const formAction = form.action;
         
-        fetch(formAction, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-    });
-});
+    //     // Send the form data using fetch to Formspree
+    //     fetch(formAction, {
+    //         method: 'POST',
+    //         body: new FormData(form), // Send form data
+    //         headers: {
+    //             'Accept': 'application/json' // Expect JSON response
+    //         }
+    //     })
+    // });
+});    // // Listen for form submission
+    // form.addEventListener('submit', function(e) {
+    //     e.preventDefault(); // Prevent default form submission
+        
+    //     // Get the Formspree endpoint from the form's action attribute
+    //     const formAction = form.action;
+        
+    //     // Send the form data using fetch to Formspree
+    //     fetch(formAction, {
+    //         method: 'POST',
+    //         body: new FormData(form), // Send form data
+    //         headers: {
+    //             'Accept': 'application/json' // Expect JSON response
+    //         }
+    //     })
+    // });
