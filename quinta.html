@@ -49,8 +49,29 @@
             <p style="font-size: 1.2em; font-weight: bold;">Tarifas</p>
 
             <div style="height: 24px;"></div>   
+            <style>
+                .responsive-table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 1.2em;
+                    table-layout: auto;
+                    word-break: break-word;
+                }
+                .responsive-table th, .responsive-table td {
+                    border: 1px solid #333;
+                    padding: 8px;
+                    text-align: left;
+                    white-space: normal;
+                    word-break: break-word;
+                }
+                .responsive-table th {
+                    background-color: rgba(100, 106, 96, 0.9);
+                    color: #fff;
+                }
+            </style>
 
-            <table style="width: 120%; min-width: 300px; border-collapse: collapse; font-size: 1.2em; margin: 0 auto; display: block;">
+            <table class="responsive-table" style="width: 100%; min-width:3 00px; border-collapse: collapse; font-size: 1.1em; margin: 0 auto;">
+
                 <thead>
                     <tr>
                         <th style="border:1px solid #333; padding:8px; text-align:left;">Tipologia</th>
@@ -59,28 +80,28 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="border:1px solid #333; padding:8px; text-align:left;">Quarto Duplo <em>standard</em> (até 2 pessoas)</td>
-                        <td style="border:1px solid #333; padding:8px;">170€</td>
+                        <td style="border:1px solid #333; padding:8px; text-align:left;" data-label="Tipologia">Quarto Duplo <em>standard</em> (até 2 pessoas)</td>
+                        <td style="border:1px solid #333; padding:8px;" data-label="Valor">170€</td>
                     </tr>
                     <tr>
-                        <td style="border:1px solid #333; padding:8px; text-align:left;">Quarto Duplo com varanda (até 2 pessoas)</td>
-                        <td style="border:1px solid #333; padding:8px;">200€</td>
+                        <td style="border:1px solid #333; padding:8px; text-align:left;" data-label="Tipologia">Quarto Duplo com varanda (até 2 pessoas)</td>
+                        <td style="border:1px solid #333; padding:8px;" data-label="Valor">200€</td>
                     </tr>
                     <tr>
-                        <td style="border:1px solid #333; padding:8px; text-align:left;">Quarto Duplo com banheira (até 2 pessoas)</td>
-                        <td style="border:1px solid #333; padding:8px;">220€</td>
+                        <td style="border:1px solid #333; padding:8px; text-align:left;" data-label="Tipologia">Quarto Duplo com banheira (até 2 pessoas)</td>
+                        <td style="border:1px solid #333; padding:8px;" data-label="Valor">220€</td>
                     </tr>
                     <tr>
-                        <td style="border:1px solid #333; padding:8px; text-align:left;">Villa <em>standard</em> (até 4 pessoas)</td>
-                        <td style="border:1px solid #333; padding:8px;">260€</td>
+                        <td style="border:1px solid #333; padding:8px; text-align:left;" data-label="Tipologia">Villa <em>standard</em> (até 4 pessoas)</td>
+                        <td style="border:1px solid #333; padding:8px;" data-label="Valor">260€</td>
                     </tr>
                     <tr>
-                        <td style="border:1px solid #333; padding:8px; text-align:left;">Villa <em>Deluxe</em> (até 4 pessoas)</td>
-                        <td style="border:1px solid #333; padding:8px;">280€</td>
+                        <td style="border:1px solid #333; padding:8px; text-align:left;" data-label="Tipologia">Villa <em>Deluxe</em> (até 4 pessoas)</td>
+                        <td style="border:1px solid #333; padding:8px;" data-label="Valor">280€</td>
                     </tr>
-                                        <tr>
-                        <td style="border:1px solid #333; padding:8px; text-align:left;">Villa Superior com Banheira (até 4 pessoas)</td>
-                        <td style="border:1px solid #333; padding:8px;">300€</td>
+                    <tr>
+                        <td style="border:1px solid #333; padding:8px; text-align:left;" data-label="Tipologia">Villa Superior com Banheira (até 4 pessoas)</td>
+                        <td style="border:1px solid #333; padding:8px;" data-label="Valor">300€</td>
                     </tr>
                 </tbody>
             </table>
