@@ -231,19 +231,21 @@
     </footer>
 
     <script>
-        // Burger menu toggle using class
+        // Burger menu toggle
         const burger = document.querySelector('.burger');
         const navLinks = document.querySelector('.nav-links');
-
         burger.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
+            if (navLinks.style.display === "flex") {
+                navLinks.style.display = "none";
+            } else {
+                navLinks.style.display = "flex";
+            }
         });
-
-        // Hide nav on link click (mobile)
+        // Optional: Hide nav on link click (mobile)
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 if (window.innerWidth <= 768) {
-                    navLinks.classList.remove('nav-active');
+                    navLinks.style.display = "none";
                 }
             });
         });
