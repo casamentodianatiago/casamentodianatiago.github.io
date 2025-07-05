@@ -36,7 +36,22 @@
             <img src="images/imagem.png" alt="Diana e Tiago" class="hero-image" style="max-width: 300px; width: 100%; margin: 24px auto; display: block;">
             <h2>O nosso casamento</h2>
             <p class="date" style="font-family: 'TT Tsars A Trial', 'Playfair Display', serif; font-weight: bold;">20.06.2026</p>
-            <div id="countdown" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 16px; justify-items: center; align-items: center;">
+            <style>
+                #countdown {
+                    display: grid;
+                    gap: 16px;
+                    justify-items: center;
+                    align-items: center;
+                    grid-template-columns: repeat(4, 1fr); /* Default: 1 row of 4 */
+                }
+
+                @media (max-width: 500px) {
+                    #countdown {
+                    grid-template-columns: repeat(2, 1fr); /* 2 rows of 2 on small screens */
+                    }
+                }
+                </style>
+                <div id="countdown">
                 <div class="countdown-item" style="font-family: 'TT Tsars A Trial', 'Playfair Display', serif; background-color: rgba(226, 226, 226, 0.447);">
                     <span id="days">00</span>
                     <p>Dias</p>
