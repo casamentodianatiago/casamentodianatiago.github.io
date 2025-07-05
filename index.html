@@ -20,85 +20,58 @@
                 <li><a href="#rsvp">Confirmação de presença</a></li>
                 <li><a href="#contacts">Contactos</a></li>
             </ul>
+            <style>
+                .nav-links {
+                    display: flex;
+                    gap: 24px;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                }
+                .nav-links li a {
+                    text-decoration: none;
+                    color: #333;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 1.1em;
+                    transition: color 0.2s;
+                }
+                .nav-links li a:hover {
+                    color: #a88b6b;
+                }
+                @media (max-width: 768px) {
+                    .nav-links {
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        top: 60px;
+                        left: 0;
+                        width: 100vw;
+                        background: #fff;
+                        z-index: 10;
+                        padding: 16px 0;
+                        display: none; /* You can toggle this with JS for burger menu */
+                    }
+                    .nav-links li {
+                        margin: 12px 0;
+                    }
+                    .nav-links li a {
+                        font-size: 1.2em;
+                        text-align: center;
+                    }
+                }
+                @media (max-width: 500px) {
+                    .nav-links li a {
+                        font-size: 1.1em;
+                    }
+                }
+            </style>
             <div class="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
             </div>
         </nav>
-        <style>
-            nav {
-                position: relative;
-            }
-            .nav-links {
-                list-style: none;
-                display: flex;
-                gap: 24px;
-                margin: 0;
-                padding: 0;
-            }
-            .nav-links li a {
-                text-decoration: none;
-                color: inherit;
-                font-size: 1em;
-                transition: color 0.2s;
-            }
-            .burger {
-                display: none;
-                cursor: pointer;
-                flex-direction: column;
-                gap: 5px;
-                height: 24px;
-                justify-content: center;
-            }
-            .burger div {
-                width: 28px;
-                height: 3px;
-                background: #333;
-                border-radius: 2px;
-                transition: all 0.3s;
-            }
-            @media (max-width: 768px) {
-                .nav-links {
-                    flex-direction: column;
-                    position: absolute;
-                    top: 60px;
-                    right: 0;
-                    background: #fff;
-                    width: 180px;
-                    padding: 16px 0;
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-                    transform: translateX(100%);
-                    transition: transform 0.3s ease;
-                    z-index: 100;
-                }
-                .nav-links.active {
-                    transform: translateX(0);
-                }
-                .burger {
-                    display: flex;
-                    position: absolute;
-                    right: 16px;
-                    top: 18px;
-                }
-            }
-        </style>
-        <script>
-            // Mobile nav toggle
-            document.addEventListener("DOMContentLoaded", function() {
-                const burger = document.querySelector('.burger');
-                const navLinks = document.querySelector('.nav-links');
-                burger.addEventListener('click', function() {
-                    navLinks.classList.toggle('active');
-                });
-                // Optional: close nav on link click (mobile)
-                navLinks.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        navLinks.classList.remove('active');
-                    });
-                });
-            });
-        </script>
     </header>
 
     <section id="home" class="hero">
