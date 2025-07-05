@@ -225,30 +225,39 @@
 
 
     </section>
-    <script>
-        // Burger menu toggle
-        const burger = document.querySelector('.burger');
-        const navLinks = document.querySelector('.nav-links');
-        burger.addEventListener('click', () => {
-            if (navLinks.style.display === "flex") {
-                navLinks.style.display = "none";
-            } else {
-                navLinks.style.display = "flex";
-            }
-        });
-        // Optional: Hide nav on link click (mobile)
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    navLinks.style.display = "none";
-                }
-            });
-        });
-    </script>
 
     <footer>
         <p>Diana & Tiago © 2026</p>
     </footer>
+
+    <script>
+        // Burger menu toggle using class
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+        });
+
+        // Hide nav on link click (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('nav-active');
+                }
+            });
+        });
+    </script>
+    <style>
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .nav-links.nav-active {
+                display: flex !important;
+            }
+        }
+    </style>
 
 
 
