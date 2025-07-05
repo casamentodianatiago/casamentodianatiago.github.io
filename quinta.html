@@ -12,62 +12,9 @@
     <header>
         <nav>
             <div class="logo">D | T</div>
-            <ul class="nav-links">
-                <li><a href="#home1">Alojamento</a></li>
-                <li><a href="#rsvp">Reserva</a></li>
-            </ul>
-            <style>
-                .nav-links {
-                    display: flex;
-                    gap: 24px;
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                }
-                .nav-links li a {
-                    text-decoration: none;
-                    color: #333;
-                    font-family: 'Montserrat', sans-serif;
-                    font-size: 1.1em;
-                    transition: color 0.2s;
-                }
-                .nav-links li a:hover {
-                    color: #a88b6b;
-                }
-                @media (max-width: 768px) {
-                    .nav-links {
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        position: absolute;
-                        top: 60px;
-                        left: 0;
-                        width: 100vw;
-                        background: #fff;
-                        z-index: 10;
-                        padding: 16px 0;
-                        display: none; /* You can toggle this with JS for burger menu */
-                    }
-                    .nav-links li {
-                        margin: 12px 0;
-                    }
-                    .nav-links li a {
-                        font-size: 1.2em;
-                        text-align: center;
-                    }
-                }
-                @media (max-width: 500px) {
-                    .nav-links li a {
-                        font-size: 1.1em;
-                    }
-                }
-            </style>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-            </div>
         </nav>
     </header>
+    <div style="height: 48px;"></div>
     <!--Add some text  -->
     <section id = "home1", class="hero" style="min-height: 190vh;">
         <div class="hero-content">
@@ -234,32 +181,24 @@
         // Burger menu toggle
         const burger = document.querySelector('.burger');
         const navLinks = document.querySelector('.nav-links');
-        burger.addEventListener('click', () => {
-            if (navLinks.style.display === "flex") {
-                navLinks.style.display = "none";
-            } else {
-                navLinks.style.display = "flex";
-            }
-        });
-        // Optional: Hide nav on link click (mobile)
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
+        if (burger && navLinks) {
+            burger.addEventListener('click', () => {
+                if (navLinks.style.display === "flex") {
                     navLinks.style.display = "none";
+                } else {
+                    navLinks.style.display = "flex";
                 }
             });
-        });
-    </script>
-    <style>
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            .nav-links.nav-active {
-                display: flex !important;
-            }
+            // Optional: Hide nav on link click (mobile)
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        navLinks.style.display = "none";
+                    }
+                });
+            });
         }
-    </style>
+    </script>
 
 
 
