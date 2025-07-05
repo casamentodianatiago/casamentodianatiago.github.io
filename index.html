@@ -237,5 +237,25 @@
 
 
     <script src="js/main.js"></script>
+    <script>
+        // Burger menu toggle
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => {
+            if (navLinks.style.display === "flex") {
+                navLinks.style.display = "none";
+            } else {
+                navLinks.style.display = "flex";
+            }
+        });
+        // Optional: Hide nav on link click (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navLinks.style.display = "none";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
