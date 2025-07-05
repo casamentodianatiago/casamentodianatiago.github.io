@@ -10,19 +10,29 @@
 </head>
 <body>
     <header>
-                <nav>
+        <nav>
             <div class="logo">D | T</div>
             <ul class="nav-links">
                 <li><a href="#home1">Alojamento</a></li>
                 <li><a href="#rsvp">Reserva</a></li>
             </ul>
-            <div class="burger">
+            <div class="burger" id="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>
             </div>
         </nav>
+        <script>
+            // Burger menu toggle for mobile
+            document.addEventListener("DOMContentLoaded", function() {
+                const burger = document.getElementById('burger');
+                const navLinks = document.querySelector('.nav-links');
+                burger.addEventListener('click', function() {
+                    navLinks.classList.toggle('nav-active');
+                    burger.classList.toggle('toggle');
+                });
+            });
+        </script>
     </header>
-    
     <!--Add some text  -->
     <section id = "home1", class="hero" style="min-height: 190vh;">
         <div class="hero-content">
