@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (distance < 0) {
             clearInterval(countdown);
-            document.getElementById('countdown').innerHTML = "<h3>O dia chegou!</h3>";
+            document.getElementById('countdown').innerHTML = "<h3 style='font-size: 3rem;'>O dia chegou!</h3>";
         }
     }, 1000);
 
